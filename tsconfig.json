@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6"],
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    // 어노테이션 지원
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    //null 값과 undefined 값에 대한 경고를 제거. 이렇게 하지 않으면 컬럼의 default 값을 일일히 체크해줘야합니다.
+    "strictNullChecks": false,
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  }
+}

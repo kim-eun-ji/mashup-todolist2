@@ -8,3 +8,5 @@ temp/
 src/api
 
 src/config/.env
+
+dist/

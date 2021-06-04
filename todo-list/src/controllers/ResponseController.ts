@@ -28,6 +28,11 @@ export class ResponseController {
     return ResponseController.jsonResponse(res, 400, message ? message : "Unauthorized");
   }
 
+  // 204 No content, (PUT, POST, DELETE 요청의 경우 성공은 했지만 전송할 데이터가 없는 경우)
+  public noContent(res: express.Response, message?: string) {
+    return ResponseController.jsonResponse(res, 204, message ? message : "No content");
+  }
+
   // 401 Unauthorized : 비인증(unauthenticated).
   public unauthorized(res: express.Response, message?: string) {
     return ResponseController.jsonResponse(res, 401, message ? message : "Unauthorized");

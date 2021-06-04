@@ -9,4 +9,16 @@ export default class TodoService {
   public list = async (): Promise<Todo[]> => {
     return await Todos.find();
   };
+
+  public view = async (id: number): Promise<Todo> => {
+    return await Todos.findOne(id);
+  };
+
+  public save = async (data: Todos) => {
+    return await data.save();
+  };
+
+  public remove = async (data: Todos) => {
+    return await data.remove();
+  };
 }

@@ -1,27 +1,15 @@
 # @kim-eun-ji
-💻👩‍💻🥱😵👎🔨🔨   
-🐈🐱🍗🛌💤💗💞
-   
-주말은 쉽니다,,, નાસ નરત્રશ   
-
-### 목록 전체 보기
----
 
 ## /todo-list
 ---
 `typescript` + `nodeJs` + `express` + `typeORM`
 
-파일정리 아직 안함   
-코드정리 아직 안함   
-개발도 아직 안함   
-제주도 갔다와서 하지않을까.,,?..............................
-
 * **/todo**
-    1. /list
-    2. ~~/view/:id~~
-    3. ~~/add~~
-    4. ~~/update~~
-    5. ~~/delete/:id~~
+    1. `get /` : todos 조회
+    2. `get /:id` : todo 조회
+    3. `post /` : todo 추가
+    4. `put /:id` : todo done update
+    5. `delete /:id` : todo 삭제
 
 * **테이블**  
     ```sql
@@ -32,24 +20,22 @@
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8
     ```
-<!-- 
-+-------+--------------+------+-----+---------+----------------+   
-| Field | Type         | Null | Key | Default | Extra          |   
-+-------+--------------+------+-----+---------+----------------+   
-| id    | int          | NO   | PRI | NULL    | auto_increment |   
-| text  | varchar(255) | NO   |     | NULL    |                |   
-| done  | tinyint      | NO   |     | 0       |                |   
-+-------+--------------+------+-----+---------+----------------+   
- -->
+    ```
+    +-------+--------------+------+-----+---------+----------------+   
+    | Field | Type         | Null | Key | Default | Extra          |   
+    +-------+--------------+------+-----+---------+----------------+   
+    | id    | int          | NO   | PRI | NULL    | auto_increment |   
+    | text  | varchar(255) | NO   |     | NULL    |                |   
+    | done  | tinyint      | NO   |     | 0       |                |   
+    +-------+--------------+------+-----+---------+----------------+   
+    ```
 
-* **구성(?)**   
+* **구성**   
 
     - 각 컨트롤러는 `BaseController`를 상속한다.   
     - crud는 `BaseController` 의 메소드를 기본적으로 사용하며 필요하다면 해당 컨트롤러에 오버라이딩해서 쓴다   
     - 반드시 `BaseController` - `ResponseController` 내부 메소드를 사용하여 클라이언트 요청에 응답한다.
-    
-* **나중에..?**   
-    `baseService` 만들기... `typeorm` repository 이용해보기 연습용...............   
+
 
 
 

@@ -12,9 +12,9 @@ TodoRouter.get("/", (req, res) => {
 // https://stoplight.io/blog/crud-api-design/
 // Paths that end with a resource name (and typically no trailing slash) are used to list multiple items (/files) or create items without specifying an identifier.
 
-TodoRouter.get("/list", todoController.list);
-TodoRouter.get(["/view", "/view/:id"], todoController.view);
-TodoRouter.post("/todo", todoController.insert);
+TodoRouter.get("/", todoController.list);
+TodoRouter.get(["/:id"], todoController.view);
+TodoRouter.post("/", todoController.insert);
 TodoRouter.put("/:id", todoController.update);
 TodoRouter.delete("/:id", todoController.delete);
 

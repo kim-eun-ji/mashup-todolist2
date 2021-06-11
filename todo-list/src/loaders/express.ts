@@ -4,7 +4,6 @@ import router from "../routes";
 export default async ({ app }: { app: express.Application }) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-
   app.use("/", router);
   // ...More middlewares
 

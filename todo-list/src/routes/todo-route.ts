@@ -4,9 +4,9 @@ import { TodoController } from "../controllers/TodoController";
 const TodoRouter: Router = Router();
 const todoController: TodoController = new TodoController();
 
-TodoRouter.get("/", (req, res) => {
-  res.send("todo");
-});
+// TodoRouter.get("/", (req, res) => {
+//   res.send("todo");
+// });
 
 // https://sanghaklee.tistory.com/57
 // https://stoplight.io/blog/crud-api-design/

@@ -3,7 +3,7 @@ import TodoRouter from "./todo-route";
 const router = Router();
 
 router.get("/", function (req, res) {
-  res.send("ㅎㅇㅎㅇㅎ메인 지금은 /todo 뿐");
+  res.send("메인 지금은 /todo 뿐");
 });
 
 router.use("/todo", TodoRouter);
